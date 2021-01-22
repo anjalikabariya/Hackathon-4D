@@ -4,7 +4,7 @@ export const Featured = ({type, contributor, subjects, collection}) => {
     return (
         <div className="featured__container">
             <h3>Featured {type}</h3>
-            <div className="featured__image-main"></div>
+            <img className="featured__image-main"></img>
             <div className="featured__body-main">
                 <div className="featured__artist-tags">
                     <div className="featured__artist-container">
@@ -14,7 +14,7 @@ export const Featured = ({type, contributor, subjects, collection}) => {
                     <p className="featured__tags">{subjects.map((tag) => `#${tag} `)}</p>
                 </div>
                 <div className="featured__collection">
-                    {collection.map((collection_name) => <div className="featured__collection-item">{collection_name} </div>)}
+                    {collection.map((item) => <div className="featured__collection-item">{item} </div>)}
                 </div>
             </div>
         </div>
