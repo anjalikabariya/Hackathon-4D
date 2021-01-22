@@ -1,10 +1,13 @@
 import React from 'react'
 
 export const Featured = ({type, contributor, subjects, collection}) => {
+    const onCollectionClick = () => {
+        console.log("clicked");
+    }
     return (
         <div className="featured__container">
             <h3>Featured {type}</h3>
-            <img className="featured__image-main"></img>
+            <div className="featured__image-main"></div>
             <div className="featured__body-main">
                 <div className="featured__artist-tags">
                     <div className="featured__artist-container">
@@ -14,7 +17,7 @@ export const Featured = ({type, contributor, subjects, collection}) => {
                     <p className="featured__tags">{subjects.map((tag) => `#${tag} `)}</p>
                 </div>
                 <div className="featured__collection">
-                    {collection.map((item) => <div className="featured__collection-item">{item} </div>)}
+                    {collection.map((item) => <div className="featured__collection-item" onClick={onCollectionClick}>{item}</div>)}
                 </div>
             </div>
         </div>
